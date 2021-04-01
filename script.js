@@ -59,17 +59,9 @@ class NumericButton extends Button {
   };
 
   numericClicked() {
-    const addDot = this.value === "." && !visor.textArray.includes(".")
-    const scapeDot = this.value === "." && visor.textArray.includes(".")
-    if(addDot) {
-      visor.textArray.push(this.value)
-      visorShow();
-    } else if(scapeDot) {
-      return
-    } else {
+    if(this.value === "." && visor.textArray.includes(".")) return
     visor.textArray.push(this.value)
     visorShow();
-    };
   }
 }
 
