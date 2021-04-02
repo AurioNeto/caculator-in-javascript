@@ -8,12 +8,9 @@ html, body {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 6fr 1fr;
-  grid-template-areas: ". . ."
-                        ". c ."
-                        ". . .";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -31,10 +28,17 @@ body {
   gap: 3px 3px;
 
 
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  height: 765px;
   background: black;
-  grid-area: c;
+  
+}
+
+@media screen and (max-width:450px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .visor {
